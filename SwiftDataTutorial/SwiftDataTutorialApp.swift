@@ -1,11 +1,5 @@
-//
-//  SwiftDataTutorialApp.swift
-//  SwiftDataTutorial
-//
-//  Created by Jboy422 on 2024/07/13.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftDataTutorialApp: App {
@@ -13,5 +7,8 @@ struct SwiftDataTutorialApp: App {
         WindowGroup {
             ContentView()
         }
+        // データを永続化するコンテナを作成
+        // パラメータとして型を渡す場合は、.selfという名前をつける。
+        .modelContainer(for: DataItem.self)
     }
 }
